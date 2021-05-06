@@ -1,0 +1,150 @@
+<div class="animated fadeIn">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="card">
+          <div class="card-header">
+            <strong>Gatekeeper</strong>
+          </div>
+          <div class="card-body">
+            <form [formGroup]="gatekeeperForm" (ngSubmit)="onFormSubmit()" enctype="multipart/form-data" class="form-horizontal">
+              
+              <div class="form-group row">
+                <label class="col-md-3 col-form-label" for="gatekeeperId">Gatekeeper ID</label>
+                <div class="col-md-9">
+                  <input type="text" id="gatekeeperId" name="gatekeeperId" formControlName="GatekeeperId" class="form-control" placeholder="Text">
+                  <span class="help-block">This is a help text</span>
+                </div>
+              </div>
+              <div class="form-group row">
+                <label class="col-md-3 col-form-label" for="name">Name</label>
+                <div class="col-md-9">
+                  <input type="text" id="name" name="name" formControlName="Name" class="form-control" placeholder="Text">
+                  <span class="help-block">This is a help text</span>
+                </div>
+              </div>
+              <div class="form-group row">
+                <label class="col-md-3 col-form-label" for="email">Email</label>
+                <div class="col-md-9">
+                  <input type="email" id="email" name="email" formControlName="Email" class="form-control" placeholder="Enter Email" autocomplete="email">
+                  <span class="help-block">Please enter your email</span>
+                </div>
+              </div>
+              <div class="form-group row">
+                <label class="col-md-3 col-form-label" for="mobile">Mobile</label>
+                <div class="col-md-9">
+                  <input type="text" id="mobile" name="mobile" formControlName="Mobile" class="form-control" placeholder="Text">
+                  <span class="help-block">This is a help text</span>
+                </div>
+              </div>
+              
+              <div class="form-group row">
+                <label class="col-md-3 col-form-label" for="country">Country</label>
+                <div class="col-md-9">
+                  <input type="text" id="country" name="country" formControlName="Country" class="form-control" placeholder="Text">
+                  <span class="help-block">This is a help text</span>
+                </div>
+              </div>
+              <div class="form-group row">
+                <label class="col-md-3 col-form-label" for="state">State</label>
+                <div class="col-md-9">
+                  <input type="text" id="state" name="state" formControlName="State" class="form-control" placeholder="Text">
+                  <span class="help-block">This is a help text</span>
+                </div>
+              </div>
+              <div class="form-group row">
+                <label class="col-md-3 col-form-label" for="city">City</label>
+                <div class="col-md-9">
+                  <input type="text" id="city" name="city" formControlName="City" class="form-control" placeholder="Text">
+                  <span class="help-block">This is a help text</span>
+                </div>
+              </div>
+              <div class="form-group row">
+                <label class="col-md-3 col-form-label" for="zipCode">Zip Code</label>
+                <div class="col-md-9">
+                  <input type="text" id="zipCode" name="zipCode" formControlName="ZipCode" class="form-control" placeholder="Text">
+                  <span class="help-block">This is a help text</span>
+                </div>
+              </div>
+              
+              <div class="form-group row">
+                <label class="col-md-3 col-form-label" for="password">Password</label>
+                <div class="col-md-9">
+                  <input type="password" id="password" name="password" formControlName="Password" class="form-control" placeholder="Password" autocomplete="current-password">
+                  <span class="help-block">Please enter a complex password</span>
+                </div>
+              </div>
+              <div class="form-group row">
+                <label class="col-md-3 col-form-label" for="confirmPassword">Confirm Password</label>
+                <div class="col-md-9">
+                  <input type="password" id="confirmPassword" name="confirmPassword" formControlName="Password" class="form-control" placeholder="Password" autocomplete="current-password">
+                  <span class="help-block">Please enter a complex password</span>
+                </div>
+              </div>
+
+              <div class="card-footer">
+                <button class="btn btn-sm btn-primary"><i class="fa fa-dot-circle-o"></i> Submit</button>
+                <button type="reset" class="btn btn-sm btn-danger"><i class="fa fa-ban"></i> Reset</button>
+              </div>
+            </form>
+          </div>
+          
+        </div>
+        
+        <div class="row">
+            <div class="col-lg-12">
+              <div class="card">
+                <div class="card-header">
+                  <i class="fa fa-align-justify"></i> Combined All Table
+                </div>
+                <div class="card-body">
+                  <table class="table table-bordered table-striped table-sm">
+                    <thead>
+                      <tr>
+                        <th>Id</th>
+                        <th>Name</th>
+                        <th>Email</th>
+                        <th>Mobile</th>
+                        <th>City</th>
+                        <th>Edit</th>
+                        <th>Delete</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr *ngFor="let employee of allGatekeeper">
+                        <td>{{employee.GatekeeperId}}</td>
+                        <td>{{employee.Name}}</td>
+                        <td>{{employee.Email}}</td>
+                        <td>{{employee.Mobile}}</td>
+                        <td>
+                          <span class="badge badge-success">{{employee.City}}</span>
+                        </td>
+                        <td class="tbl2">  
+                          <button type="button" class="btn btn-info" matTooltip="Click Edit Button"(click)="GatekeeperEdit(employee.Id)">Edit</button>  
+                        </td>  
+                        <td class="tbl2">  
+                          <button type="button" class="btn btn-danger" matTooltip="Click Delete Button"(click)="DeleteGatekeeper(employee.Id)">Delete</button>  
+                        </td>  
+                      </tr>                      
+                    </tbody>
+                  </table>
+                  <nav>
+                    <ul class="pagination">
+                      <li class="page-item"><a class="page-link" href="#">Prev</a></li>
+                      <li class="page-item active">
+                        <a class="page-link" href="#">1</a>
+                      </li>
+                      <li class="page-item"><a class="page-link" href="#">2</a></li>
+                      <li class="page-item"><a class="page-link" href="#">3</a></li>
+                      <li class="page-item"><a class="page-link" href="#">4</a></li>
+                      <li class="page-item"><a class="page-link" href="#">Next</a></li>
+                    </ul>
+                  </nav>
+                </div>
+              </div>
+            </div>
+            <!--/.col-->
+          </div>
+          <!--/.row-->
+        
+  </div>
+  

@@ -1,0 +1,20 @@
+export class StaffUserVM {  
+    Id:number;  
+    StaffId:string;  
+    AdminId:string;  
+    StaffName:string;  
+    Email:string;
+    Mobile1:string;
+    Mobile2:string;
+    Address:string;
+    State:string;
+    City:string;
+    ZipCode:string;
+    Comment:string;
+    UserType:string;
+    Designation:string;
+    OTP:string;
+    AuthCode:string;
+    Password:string;
+    Status:string;
+}  

@@ -1,0 +1,76 @@
+<div class="animated fadeIn">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="card">
+          <div class="card-header">
+            <strong>All User</strong>
+          </div>
+          <div class="card-body">
+            <form [formGroup]="staffForm" (ngSubmit)="onFormSubmit()" enctype="multipart/form-data" class="form-horizontal">
+              
+              <!-- <div class="form-group row">
+                <label class="col-md-3 col-form-label" for="ddl_admin">Select</label>
+                <div class="col-md-9">
+                  <select id="ddl_admin" name="ddl_admin" class="form-control" data-live-search="true">
+                    <option value="0">Select admin</option>
+                    <option *ngFor="let test of admin$" [value]="test.Id">{{test.Name}}</option>
+                  </select>
+                </div>
+              </div> -->
+              
+            </form>
+          </div>
+          <!-- <div class="card-footer">
+            <button type="submit" class="btn btn-sm btn-primary"><i class="fa fa-dot-circle-o"></i> Submit</button>
+            <button type="reset" class="btn btn-sm btn-danger"><i class="fa fa-ban"></i> Reset</button>
+          </div> -->
+        </div>
+        
+        <div class="row">
+            <div class="col-lg-12">
+              <div class="card">
+                <div class="card-header">
+                  <i class="fa fa-align-justify"></i> All Users
+                </div>
+                <div class="card-body">
+                  <table class="table table-bordered table-striped table-sm">
+                    <thead>
+                      <tr>
+                        <th>Username</th>
+                        <th>Email</th>
+                        <th>Mobile</th>
+                        <th>Status</th>
+                        <th>Package</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr *ngFor="let user of admin$">
+                        <td>{{user.Name}}</td>
+                        <td>{{user.Email}}</td>
+                        <td>{{user.Mobile}}</td>
+                        <td>{{user.Status}}</td>
+                        <td>{{user.PackageName}}</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                  <nav>
+                    <ul class="pagination">
+                      <li class="page-item"><a class="page-link" href="#">Prev</a></li>
+                      <li class="page-item active">
+                        <a class="page-link" href="#">1</a>
+                      </li>
+                      <li class="page-item"><a class="page-link" href="#">2</a></li>
+                      <li class="page-item"><a class="page-link" href="#">3</a></li>
+                      <li class="page-item"><a class="page-link" href="#">4</a></li>
+                      <li class="page-item"><a class="page-link" href="#">Next</a></li>
+                    </ul>
+                  </nav>
+                </div>
+              </div>
+            </div>
+            <!--/.col-->
+          </div>
+          <!--/.row-->
+        
+  </div>
+  

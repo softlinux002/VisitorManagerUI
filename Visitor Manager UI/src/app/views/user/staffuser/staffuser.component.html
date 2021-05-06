@@ -1,0 +1,176 @@
+<div class="animated fadeIn">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="card">
+          <div class="card-header">
+            <strong>Staff User</strong> Elements
+          </div>
+          <div class="card-body">
+            <form [formGroup]="staffForm" (ngSubmit)="onFormSubmit()" enctype="multipart/form-data" class="form-horizontal">
+              
+              <!-- <div class="form-group row">
+                <label class="col-md-3 col-form-label" for="ddl_admin">Select</label>
+                <div class="col-md-9">
+                  <select id="ddl_admin" name="ddl_admin" formControlName="AdminId" class="form-control" data-live-search="true">
+                    <option value="0">Select admin</option>
+                    <option *ngFor="let test of admin$" [value]="test.Id">{{test.Name}}</option>
+                  </select>
+                </div>
+              </div> -->
+              <div class="form-group row">
+                <label class="col-md-3 col-form-label" for="staffId">Staff ID</label>
+                <div class="col-md-9">
+                  <input type="text" id="staffId" name="staffId" formControlName="StaffId" class="form-control" placeholder="Text">
+                  <span class="help-block">This is a help text</span>
+                </div>
+              </div>
+              <div class="form-group row" >
+                <label class="col-md-3 col-form-label" for="designation">Designation</label>
+                <div class="col-md-9">
+                  <input type="text" id="designation" name="designation" formControlName="Designation" class="form-control" placeholder="Text">
+                  <span class="help-block">This is a help text</span>
+                </div>
+              </div>
+              <div class="form-group row">
+                <label class="col-md-3 col-form-label" for="staffName">Staff Name</label>
+                <div class="col-md-9">
+                  <input type="text" id="staffName" name="staffName" formControlName="StaffName" class="form-control" placeholder="Text">
+                  <span class="help-block">This is a help text</span>
+                </div>
+              </div>
+              <div class="form-group row">
+                <label class="col-md-3 col-form-label" for="email">Email</label>
+                <div class="col-md-9">
+                  <input type="email" id="email" name="email" formControlName="Email" class="form-control" placeholder="Enter Email" autocomplete="email">
+                  <span class="help-block">Please enter your email</span>
+                </div>
+              </div>
+              <div class="form-group row">
+                <label class="col-md-3 col-form-label" for="mobile">Mobile</label>
+                <div class="col-md-9">
+                  <input type="text" id="mobile" name="mobile" formControlName="Mobile1" class="form-control" placeholder="Text">
+                  <span class="help-block">This is a help text</span>
+                </div>
+              </div>
+              <div class="form-group row">
+                <label class="col-md-3 col-form-label" for="mobile2">Mobile2</label>
+                <div class="col-md-9">
+                  <input type="text" id="mobile2" name="mobile2" formControlName="Mobile2" class="form-control" placeholder="Text">
+                  <span class="help-block">This is a help text</span>
+                </div>
+              </div>
+              <div class="form-group row">
+                <label class="col-md-3 col-form-label" for="address">Address</label>
+                <div class="col-md-9">
+                  <input type="text" id="address" name="address" formControlName="Address" class="form-control" placeholder="Text">
+                  <span class="help-block">This is a help text</span>
+                </div>
+              </div>
+              <div class="form-group row">
+                <label class="col-md-3 col-form-label" for="state">State</label>
+                <div class="col-md-9">
+                  <input type="text" id="state" name="state" formControlName="State" class="form-control" placeholder="Text">
+                  <span class="help-block">This is a help text</span>
+                </div>
+              </div>
+              <div class="form-group row">
+                <label class="col-md-3 col-form-label" for="city">City</label>
+                <div class="col-md-9">
+                  <input type="text" id="city" name="city" formControlName="City" class="form-control" placeholder="Text">
+                  <span class="help-block">This is a help text</span>
+                </div>
+              </div>
+              <div class="form-group row">
+                <label class="col-md-3 col-form-label" for="zipCode">Zip Code</label>
+                <div class="col-md-9">
+                  <input type="text" id="zipCode" name="zipCode" formControlName="ZipCode" class="form-control" placeholder="Text">
+                  <span class="help-block">This is a help text</span>
+                </div>
+              </div>
+              <div class="form-group row">
+                <label class="col-md-3 col-form-label" for="comment">Comment</label>
+                <div class="col-md-9">
+                  <input type="text" id="comment" name="comment" formControlName="Comment" class="form-control" placeholder="Text">
+                  <span class="help-block">This is a help text</span>
+                </div>
+              </div>
+              <div class="form-group row">
+                <label class="col-md-3 col-form-label" for="password">Password</label>
+                <div class="col-md-9">
+                  <input type="password" id="password" name="password" formControlName="Password" class="form-control" placeholder="Password" autocomplete="current-password">
+                  <span class="help-block">Please enter a complex password</span>
+                </div>
+              </div>
+              <div class="form-group row">
+                <label class="col-md-3 col-form-label" for="confirmPassword">Confirm Password</label>
+                <div class="col-md-9">
+                  <input type="password" id="confirmPassword" name="confirmPassword" class="form-control" placeholder="Password" autocomplete="current-password">
+                  <span class="help-block">Please enter a complex password</span>
+                </div>
+              </div>
+              
+              <div class="card-footer">
+                <button class="btn btn-sm btn-primary"><i class="fa fa-dot-circle-o"></i> Submit</button>
+                <button type="reset" class="btn btn-sm btn-danger"><i class="fa fa-ban"></i> Reset</button>
+              </div>
+            </form>
+          </div>
+          
+        </div>
+        
+        <div class="row">
+            <div class="col-lg-12">
+              <div class="card">
+                <div class="card-header">
+                  <i class="fa fa-align-justify"></i> Combined All Table
+                </div>
+                <div class="card-body">
+                  <table class="table table-bordered table-striped table-sm">
+                    <thead>
+                      <tr>
+                        <th>Username</th>
+                        <th>Date registered</th>
+                        <th>Role</th>
+                        <th>Status</th>
+                        <th>Edit</th>
+                        <th>Delete</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr *ngFor="let employee of allStudent">
+                        <td>{{employee.Id}}</td>
+                        <td>{{employee.Email}}</td>
+                        <td>{{employee.Mobile1}}</td>
+                        <td>
+                          <span class="badge badge-success">{{employee.Address}}</span>
+                        </td>
+                        <td class="tbl2">  
+                          <button type="button" class="btn btn-info" matTooltip="Click Edit Button"(click)="StaffEdit(employee.Id)">Edit</button>  
+                        </td>  
+                        <td class="tbl2">  
+                          <button type="button" class="btn btn-danger" matTooltip="Click Delete Button"(click)="DeleteStaff(employee.Id)">Delete</button>  
+                        </td>  
+                      </tr>                      
+                    </tbody>
+                  </table>
+                  <nav>
+                    <ul class="pagination">
+                      <li class="page-item"><a class="page-link" href="#">Prev</a></li>
+                      <li class="page-item active">
+                        <a class="page-link" href="#">1</a>
+                      </li>
+                      <li class="page-item"><a class="page-link" href="#">2</a></li>
+                      <li class="page-item"><a class="page-link" href="#">3</a></li>
+                      <li class="page-item"><a class="page-link" href="#">4</a></li>
+                      <li class="page-item"><a class="page-link" href="#">Next</a></li>
+                    </ul>
+                  </nav>
+                </div>
+              </div>
+            </div>
+            <!--/.col-->
+          </div>
+          <!--/.row-->
+        
+  </div>
+  
